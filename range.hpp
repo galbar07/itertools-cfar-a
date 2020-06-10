@@ -1,14 +1,51 @@
-#pragma once
-#include <vector>
+#include <iostream>
+using namespace std;
 
 namespace itertools{
+class range{
 
-    // vector<int> range(int v1,int v2){
-    //         vector<int> vect;  
-    //         for(int i=v1;i<v2;i++){
-    //             vect.push_back(i); 
-    //         }
+private:
+    int first,last;
 
-    //     return vect;
-    // }
+public:
+    range(int _first,int _last){
+        first = _first;
+        last = _last;
+    }
+
+    //begin , opreator++ , opreator != ,
+
+    class itreator{
+
+    private:
+        int val;
+
+
+    public:
+        itreator(int _val):val(_val){}
+
+        itreator& operator++() {
+            ++val;
+            return *this;
+        }
+
+        bool operator!=(itreator& other ) const{
+            return this->val != other.val;
+        }
+
+        int operator* (){
+            return val;
+        }
+    };
+
+    itreator begin(){
+        return itreator(first);
+    }
+
+    itreator end(){
+        return itreator(last);
+    }
+
+};
 }
+
