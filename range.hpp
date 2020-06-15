@@ -15,21 +15,21 @@ public:
 
     //begin , opreator++ , opreator != ,
 
-    class itreator{
+    class iterator{
 
     private:
         int val;
 
 
     public:
-        itreator(int _val):val(_val){}
+        iterator(int _val):val(_val){}
 
-        itreator& operator++() {
+        iterator& operator++() {
             ++val;
             return *this;
         }
 
-        bool operator!=(itreator& other ) const{
+        bool operator!=(iterator& other ) const{
             return this->val != other.val;
         }
 
@@ -38,12 +38,12 @@ public:
         }
     };
 
-    itreator begin(){
-        return itreator(first);
+    iterator begin(){
+        return iterator(first);
     }
 
-    itreator end(){
-        return itreator(last);
+    iterator end(){
+        return iterator(last);
     }
 
 };

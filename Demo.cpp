@@ -4,7 +4,6 @@
 //  Version 1 by Adam Lev-Ari on 02/2020. Copyright © 2020 Adam Lev-Ari. All rights reserved.
 //  Version 2 by Erel Segal-Halevi on 06/2020.
 //
-
 #include <iostream>
 #include <vector>
 
@@ -24,20 +23,20 @@ struct lessThan3 {
 
 int main(int argc, const char * argv[]) {
     
-    cout << "####  range:  ####";
-	for (int i: range(5,9))
-		cout << i << " ";      // 5 6 7 8
+    // cout << "####  range:  ####\n";
+	// for (int i: range(5,9))
+	// 	cout << i << " ";      // 5 6 7 8
 
     vector<int> vecInt = {1,2,3,4};
     vector<string> vecString = {"Hello", "Bye", "Adam"};
     vector<float> vecFloat = {-1, 0.3, 5.2, -8.3};
     
-    cout << "####  accumulate:  ####";
-    cout << endl << "accumulate of range: " << endl;
+    cout << "####  accumulate:  ####\n";
+        cout << endl << "accumulate of range: " << endl;
 	for (int i: accumulate(range(5,9)))
 		cout << i << " ";      // 5 11 18 26
 
-    cout << endl << "accumulate of vector<string>: " << endl;
+    cout << endl << "accumulate of vec  tor<string>: \n" << endl;
     for (auto i: accumulate(vecString) )
         cout << i << " ";  // Hello HelloBye HelloByeAdam
     cout << endl << endl;
