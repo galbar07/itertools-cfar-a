@@ -15,7 +15,7 @@ using namespace std;
 
 TEST_CASE("range"){
     int j = 0;
-    for (int i: accumulate(range(0,101))){
-        CHECK(i==j++);
+    for (int i: range(0,101)){
+        CHECK(i == j++);
     }
 }
